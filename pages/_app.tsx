@@ -1,6 +1,15 @@
-import '../styles/globals.css'
+import Cursor from '../components/cursor';
+import Header from '../components/header'
+import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
+import { useRef } from 'react';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+
+  return (  
+  <>
+  <Cursor/>
+   <Component {...pageProps} />
+  </>
+ )
 }

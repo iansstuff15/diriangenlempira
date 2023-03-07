@@ -1,0 +1,32 @@
+.container{
+    padding: 1rem 2vw;
+   
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    align-items: center;
+    ul{
+        list-style-type: none;
+        justify-self: center;
+        li{
+            display: inline-block;
+            padding: 0 1rem;
+            font-weight: 500;
+            
+        }
+    }
+    .cta_container{
+        justify-self: end;
+        button{
+            border: none;
+            background-color: #1f1f1f;
+            color: white;
+            font-weight: 700;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            
+            
+        }
+    }
+   
+}
