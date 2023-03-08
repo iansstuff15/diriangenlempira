@@ -12,7 +12,7 @@ const Button:React.FC<buttonProps> =({children,backgroundColor,foregroundColor})
         
         className={styles.container}
         style={{
-            backgroundColor:backgroundColor? backgroundColor: "#1f1f1f",
+            backgroundColor:backgroundColor? backgroundColor: "#4d4b4b",
             color:foregroundColor? foregroundColor: "white",
         }}
         >{children}</button>

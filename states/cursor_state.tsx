@@ -12,4 +12,6 @@ export const cursorState = proxy({
     visible:true,
     locationX:0,
     locationY:0,
+    padding: 0,
+    scale:1,
 })

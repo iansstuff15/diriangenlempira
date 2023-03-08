@@ -28,6 +28,8 @@ const mouseMove = (e:MouseEvent) =>{
         height:snapshot.height,
         width:snapshot.width,
         pointerEvents:"none",
+        visibility: snapshot.visible? "visible":"hidden",
+        scale:snapshot.scale
     })
     }
   
