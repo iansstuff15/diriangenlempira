@@ -1,6 +1,8 @@
 import Link from "next/link"
 import styles from '../styles/components/header.module.scss'
 import Image from "next/image"
+import Button from "./button"
+import NavigateItem from "./navigateItem"
 const Header = () =>{
 
 return(
@@ -9,23 +11,13 @@ return(
         <Image alt="diriangen powell website logo" src={'/logo.svg'} width={50} height={50}/>
         </div>
         <ul>
-        <Link href="/">
-            <li>
-            Home
-            </li>
-          
-        </Link>
-        <Link href="/">
-            <li>Work</li>
-        </Link>
-        <Link href="/">
-            <li>About me</li>
-        </Link>
-        
+        <NavigateItem to="/" label="Home"  />
+        <NavigateItem to="/" label="Work"  />
+        <NavigateItem to="/" label="About me"  />
         </ul>
         <div className={styles.cta_container}>
         <Link href="/">
-            <button>Contact</button>
+            <Button>Contact Me</Button>
         </Link>
         </div>
       

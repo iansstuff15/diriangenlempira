@@ -1,34 +1,36 @@
 import { useEffect, useRef, useState } from "react"
 import { gsap, Power4 } from "gsap"
-const Cursor =()=>{
+import { cursorState } from "../states/cursor_state"
+import { useSnapshot } from "valtio"
+
+const Cursor=()=>{
 let containerRef: HTMLDivElement | null
+const snapshot = useSnapshot(cursorState)
 const [mousePosition,setMousePosition] = useState({
     x:0,
     y:0
 })
-const mouseMove = (e:MouseEvent) =>{
 
+const mouseMove = (e:MouseEvent) =>{
+    cursorState.locationX = e.clientX-16
+    cursorState.locationY = e.clientY-16
     setMousePosition({
         x:e.clientX,
         y:e.clientY
     })
     
-  
+    
     gsap.to(containerRef,.3,{
-        x:mousePosition.x,
-        y:mousePosition.y,
-       
+        x:mousePosition.x -16,
+        y:mousePosition.y -16,
+        backgroundColor:snapshot.backgroundColor,
+        color:snapshot.foregroundColor,
+        height:snapshot.height,
+        width:snapshot.width,
+        pointerEvents:"none",
     })
     }
-    const mouseEnter = (e:MouseEvent) =>{
-    
-       
-        gsap.to(containerRef,.3,{
-            width:1.4,
-            height:1.4,
-           
-        })
-        }
+  
 useEffect(()=>{
 
 window.addEventListener("mousemove",mouseMove)
@@ -41,16 +43,18 @@ console.log(containerRef)
 },)
 
 return<div ref={el =>{containerRef=el}}  style={{
-    width:20,
-    height:20,
+
+    padding:15,
     position:'fixed',
     zIndex:3,
-    backgroundColor:"black",
+   
     borderRadius:100,
-  
-    margin:"1rem"
+    mixBlendMode:snapshot.showDifference? 'difference': 'normal',
+ 
     }}>
-
+{
+    snapshot.text
+}
 </div>
 }
 

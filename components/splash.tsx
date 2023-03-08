@@ -7,11 +7,11 @@ const Splash = ()=>{
     const [greet,setGreet] = useState('')
     const [count,setCount] = useState(0)
 
-    let containerRef = useRef(null)
+    let containerRef: HTMLDivElement | null
     useEffect(()=>{
 
         setTimeout(()=>{
-            if(count< Greatings.length){
+            if(count < Greatings.length){
                 setCount(count+1)
                 setGreet(Greatings[count])
             }

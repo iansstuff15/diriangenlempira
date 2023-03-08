@@ -1,13 +1,16 @@
 .container{
-    padding: 1rem 2vw;
-   
+    width: 90vw;
+    position:absolute;
+    padding: 1rem 5vw;
     display: grid;
+    mix-blend-mode: difference;
     grid-template-columns: repeat(3,1fr);
-    
+    color: white;
     align-items: center;
     ul{
         list-style-type: none;
         justify-self: center;
+        color: inherit;
         li{
             display: inline-block;
             padding: 0 1rem;
@@ -17,16 +20,7 @@
     }
     .cta_container{
         justify-self: end;
-        button{
-            border: none;
-            background-color: #1f1f1f;
-            color: white;
-            font-weight: 700;
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            
-            
-        }
+    
     }
    
 }

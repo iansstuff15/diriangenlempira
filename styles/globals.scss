@@ -3,9 +3,11 @@
 *{
     margin: 0;
     padding: 0;
+    cursor: none;
     font-family: 'Roboto', sans-serif;
     a{
         text-decoration: none;
         color: inherit;
     }
+    overflow-x: hidden;
 }
