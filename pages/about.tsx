@@ -11,7 +11,8 @@ const Contact = () =>{
             <div className={styles.container}>
               
                 
-                <AnimatedImage  alt="Image of Diriangen Lempira Powell" src={'/profile.jpg'} width={400} height={400}  />
+                <AnimatedImage className={styles.image} alt="Image of Diriangen Lempira Powell" src={'/profile.jpg'} width={400} height={400}  />
+                <h2>Fullstack Software Engineer</h2>
                 <h1>Powell, Diriangen Lempira</h1>
                 <Button backgroundColor="#455CE9">Download CV</Button>
             </div>

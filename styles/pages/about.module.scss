@@ -4,5 +4,8 @@
     min-height: 100vh;
     padding: 10vh 5vw;
     color: white;
-    
+    .image{ filter: grayscale(100%);border-radius: 100%;}   
+    h2{
+        color:#4d4b4b
+    }
 }
